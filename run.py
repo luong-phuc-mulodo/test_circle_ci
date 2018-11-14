@@ -8,16 +8,16 @@ def run_test(time):
 		'https://search.rakuten.co.jp/search/mall/galaxy%20s8%20%E3%82%B1%E3%83%BC%E3%82%B9',
 		'https://search.rakuten.co.jp/search/mall/galaxy%20s9%20%E3%82%B1%E3%83%BC%E3%82%B9',
 		'https://search.rakuten.co.jp/search/mall/galaxy%20s9%2B%20%E3%82%B1%E3%83%BC%E3%82%B9',
-		'https://search.rakuten.co.jp/search/mall/huawei%20mate%2010%20pro',
-		'https://search.rakuten.co.jp/search/mall/IC%E3%82%AB%E3%83%BC%E3%83%89',
-		'https://search.rakuten.co.jp/search/mall/iface%20iphone7',
-		'https://search.rakuten.co.jp/search/mall/iface%20iphone8',
-		'https://search.rakuten.co.jp/search/mall/iface%20iphonex',
-		'https://search.rakuten.co.jp/search/mall/iphone8+%E3%82%B1%E3%83%BC%E3%82%B9/?p=1&t=62327836128',
-		'https://search.rakuten.co.jp/search/mall/iphone7',
-		'https://search.rakuten.co.jp/search/mall/iphone6',
-		'https://search.rakuten.co.jp/search/mall/iphone',
-		'https://search.rakuten.co.jp/search/mall/iphones'
+		# 'https://search.rakuten.co.jp/search/mall/huawei%20mate%2010%20pro',
+		# 'https://search.rakuten.co.jp/search/mall/IC%E3%82%AB%E3%83%BC%E3%83%89',
+		# 'https://search.rakuten.co.jp/search/mall/iface%20iphone7',
+		# 'https://search.rakuten.co.jp/search/mall/iface%20iphone8',
+		# 'https://search.rakuten.co.jp/search/mall/iface%20iphonex',
+		# 'https://search.rakuten.co.jp/search/mall/iphone8+%E3%82%B1%E3%83%BC%E3%82%B9/?p=1&t=62327836128',
+		# 'https://search.rakuten.co.jp/search/mall/iphone7',
+		# 'https://search.rakuten.co.jp/search/mall/iphone6',
+		# 'https://search.rakuten.co.jp/search/mall/iphone',
+		# 'https://search.rakuten.co.jp/search/mall/iphones'
 	]
 
 	print('Get data from Rakuten time %s' % time)
