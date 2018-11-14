@@ -45,6 +45,6 @@ def get_data(content):
 		print(link.get('href'))
 
 
-total = 40
+total = 1
 for time in range(0,total):
 	run_test(time+1)
