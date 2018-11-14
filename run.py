@@ -27,11 +27,13 @@ def run_test(time):
 	rs = (grequests.get(u, headers=headers) for u in urls)
 	responses = grequests.map(rs)
 
+	i = 0
 	for response in responses:
 		if response.status_code != 200:
-			raise Exception("Error Response : %s" % response.status_code)
+			raise Exception("Error Response : %s for url : %s" % (response.status_code,urls[i]))
 		else:
 			get_data(response.text)
+		i = i + 1
 
 def get_data(content):
 	soup = BeautifulSoup(content, 'html.parser')
@@ -43,6 +45,6 @@ def get_data(content):
 		print(link.get('href'))
 
 
-total = 4
+total = 1
 for time in range(0,total):
 	run_test(time+1)
