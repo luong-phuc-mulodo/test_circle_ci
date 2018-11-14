@@ -1,9 +1,38 @@
-version: 2.1
-
-orbs:
-    hello: circleci/hello-build@.0.0.5 # uses the circleci/buildpack-deps Docker image
-
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.6.4
+    working_directory: ~/circleci-demo-python
+    steps:
+      - run:
+          name: get ip public
+          command: curl ifconfig.co
+      - run:
+          name: update pip
+          command: sudo pip install --upgrade pip
+      - run:
+          name: install request module
+          command: sudo pip install requests
+      - run:
+          name: install grequests module
+          command: sudo pip install grequests
+      - run:
+          name: install bs4
+          command: sudo pip install bs4
+      - checkout
+      - run:
+          name: run test
+          command: python run.py
 workflows:
-    "Hello Workflow":
-        jobs:
-          - hello/hello-build
+  version: 2
+  every_second:
+    triggers:
+     - schedule:
+         cron: "* * * * *"
+         filters:
+           branches:
+             only:
+               - master
+    jobs:
+      - build
