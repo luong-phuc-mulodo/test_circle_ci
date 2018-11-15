@@ -61,3 +61,5 @@ def get_data(content):
 total = 40
 for times in range(0,total):
 	run_test(times+1)
+	time.sleep(3)
+	print('Run again after 3 seconds')
