@@ -20,19 +20,22 @@ jobs:
       - run:
           name: install bs4
           command: sudo pip install bs4
+      - run:
+          name: install json
+          command: sudo pip install simplejson
       - checkout
       - run:
           name: run test
-          command: python run.py
+          command: python test.py
 workflows:
   version: 2
   every_second:
-    # triggers:
-    #  - schedule:
-    #      cron: "* * * * *"
-    #      filters:
-    #        branches:
-    #          only:
-    #            - master
+    triggers:
+     - schedule:
+         cron: "* * * * *"
+         filters:
+           branches:
+             only:
+               - master
     jobs:
       - build

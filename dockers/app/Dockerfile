@@ -4,6 +4,7 @@ RUN sudo pip install --upgrade pip
 RUN sudo pip install requests
 RUN sudo pip install grequests
 RUN sudo pip install bs4
+RUN sudo pip install simplejson
 
 ADD ./server.py /tmp/server.py
 
