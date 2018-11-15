@@ -30,12 +30,12 @@ jobs:
 workflows:
   version: 2
   every_second:
-    triggers:
-     - schedule:
-         cron: "* * * * *"
-         filters:
-           branches:
-             only:
-               - master
+    # triggers:
+    #  - schedule:
+    #      cron: "* * * * *"
+    #      filters:
+    #        branches:
+    #          only:
+    #            - master
     jobs:
       - build
