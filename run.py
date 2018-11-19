@@ -58,8 +58,8 @@ def get_data(content):
 		print(link.get('href'))
 
 
-total = 40
+total = 100
 for times in range(0,total):
 	run_test(times+1)
-	time.sleep(3)
+	time.sleep(1)
 	print('Run again after 3 seconds')
